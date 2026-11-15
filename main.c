@@ -3,7 +3,16 @@
 int main(void)
 {
     int n;
-    scanf("%d", &n);
-    /* TODO */
+    long long sum = 0;
+    if (scanf("%d", &n) != 1)
+        return 0;
+    if (n < 0)
+    {
+        printf("NG");
+        return 0;
+    }
+    for (long long i = 1; i <= n; i += 2)
+        sum += i;
+    printf("%lld", sum);
     return 0;
 }
